@@ -1,6 +1,6 @@
 {
   "name": "@dexical/expo-store-signing",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "description": "Expo config plugin for Android store signing",
   "main": "app.plugin.js",
   "scripts": {
