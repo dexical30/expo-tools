@@ -34,4 +34,5 @@ jobs:
         run: pnpm run build
 
       - name: Publish package (Trusted Publisher)
-        run: pnpm run publish:trusted
+        working-directory: packages/expo-store-signing
+        run: npm publish --provenance --access public --yes
