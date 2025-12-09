@@ -8,7 +8,7 @@
     "clean": "rm -rf plugin/build",
     "test": "cd plugin && jest",
     "prepublishOnly": "pnpm build",
-    "publish": "pnpm publish --provenance --access public"
+    "publish:trusted": "npm publish --provenance --access public --yes"
   },
   "publishConfig": {
     "access": "public",
