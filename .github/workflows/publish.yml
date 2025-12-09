@@ -15,12 +15,17 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10.24.0
+
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 18
           registry-url: "https://registry.npmjs.org"
-          package-provenance: true
+          cache: "pnpm"
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
@@ -29,6 +34,4 @@ jobs:
         run: pnpm run build
 
       - name: Publish package (Trusted Publisher)
-        run: |
-          cd packages/expo-store-signing
-          npm publish --provenance --access public
+        run: pnpm --filter './packages/*' publish --provenance --access public
