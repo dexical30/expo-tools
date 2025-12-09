@@ -1,4 +1,4 @@
-# @repo/expo-store-signing
+# @dexical/expo-store-signing
 
 Android 앱 서명을 위한 Expo config plugin입니다. 이 플러그인은 `build.gradle` 파일을 수정하여 Android 앱의 서명 설정을 자동으로 구성합니다.
 
@@ -9,11 +9,11 @@ Android 앱 서명을 위한 Expo config plugin입니다. 이 플러그인은 `b
 ## 설치 (Installation)
 
 ```bash
-npm install @repo/expo-store-signing
+npm install @dexical/expo-store-signing
 # 또는
-pnpm add @repo/expo-store-signing
+pnpm add @dexical/expo-store-signing
 # 또는
-yarn add @repo/expo-store-signing
+yarn add @dexical/expo-store-signing
 ```
 
 ## 사용 방법 (Usage)
@@ -26,7 +26,7 @@ export default {
     // ... 기타 설정
     plugins: [
       [
-        "@repo/expo-store-signing",
+        "@dexical/expo-store-signing",
         {
           storeFile: "./credentials/prod.keystore",
           storePassword: process.env.ANDROID_KEYSTORE_PASSWORD,

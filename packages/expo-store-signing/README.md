@@ -1,4 +1,4 @@
-# @repo/expo-store-signing
+# @dexical/expo-store-signing
 
 Expo config plugin for Android store signing. This plugin automatically configures your Android app's signing configuration by modifying the `build.gradle` file.
 
@@ -9,11 +9,11 @@ This plugin is designed for Expo CNG (Continuous Native Generation), allowing yo
 ## Installation
 
 ```bash
-npm install @repo/expo-store-signing
+npm install @dexical/expo-store-signing
 # or
-pnpm add @repo/expo-store-signing
+pnpm add @dexical/expo-store-signing
 # or
-yarn add @repo/expo-store-signing
+yarn add @dexical/expo-store-signing
 ```
 
 ## Usage
@@ -26,7 +26,7 @@ export default {
     // ... other config
     plugins: [
       [
-        "@repo/expo-store-signing",
+        "@dexical/expo-store-signing",
         {
           storeFile: "./credentials/prod.keystore",
           storePassword: process.env.ANDROID_KEYSTORE_PASSWORD,

@@ -7,10 +7,12 @@
     "build": "cd plugin && tsc",
     "clean": "rm -rf plugin/build",
     "test": "cd plugin && jest",
-    "prepare": "npm run build"
+    "prepare": "npm run build",
+    "prepublishOnly": "pnpm build"
   },
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "provenance": true
   },
   "files": [
     "plugin/build"
