@@ -16,7 +16,7 @@ const withStoreSigning: ConfigPlugin<StoreSigningPluginProps> = (
   props
 ) => {
   return withAppBuildGradle(config, (config) => {
-    const keystorePath = path.join(process.cwd(), props.storeFile);
+    const keystorePath = props.storeFile;
 
     if (!fs.existsSync(keystorePath)) {
       throw new Error(
